@@ -1,315 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Free Body Diagram Tool</title>
-<style>
-  :root {
-    --bg: #0f1115;
-    --panel: #1b1f2a;
-    --grid: #2a2f40;
-    --text: #e6e6eb;
-    --accent: #4da3ff;
-    --danger: #ff4d4d;
-  }
+  <meta charset="UTF-8" />
+  <title>Weekly Meal Prep Planner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: system-ui, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
 
-  h1 {
-    margin: 16px 0 8px;
-    font-weight: 600;
-  }
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
-  .controls {
-    background: var(--panel);
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
 
-  button, label {
-    background: #252a3a;
-    color: var(--text);
-    border: none;
-    padding: 6px 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+    .meal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
 
-  button.active {
-    background: var(--accent);
-    color: #000;
-  }
+    .meal-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
-  label {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    cursor: pointer;
-  }
+    .meal-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
 
-  input[type="checkbox"] {
-    cursor: pointer;
-  }
+    .meal-card .content {
+      padding: 15px;
+      flex-grow: 1;
+    }
 
-  canvas {
-    background: #0c0f18;
-    border-radius: 10px;
-    box-shadow: 0 0 0 1px #222 inset;
-  }
+    .meal-card h3 {
+      margin-top: 0;
+    }
 
-  .panel {
-    width: 520px;
-    background: var(--panel);
-    margin-top: 12px;
-    padding: 10px;
-    border-radius: 8px;
-  }
+    .meal-card button {
+      background: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
 
-  .force-item {
-    font-size: 14px;
-    margin: 4px 0;
-    opacity: 0.9;
-  }
-</style>
+    .meal-card button:hover {
+      background: #43a047;
+    }
+
+    .summary {
+      margin-top: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 <body>
 
-<h1>Free Body Diagram Tool</h1>
+<header>
+  <h1>Weekly Meal Prep Planner</h1>
+  <p>Plan your meals and track calories for the week</p>
+</header>
 
-<div class="controls">
-  <button id="addMode" class="active">Add Arrows</button>
-  <button id="labelMode">Add Labels</button>
-  <button id="deleteMode">Delete Arrows</button>
+<div class="container">
+  <h2>Meals</h2>
 
-  <label><input type="checkbox" id="netForce"> Net Force</label>
-  <label><input type="checkbox" id="snapAngle"> Snap Angle</label>
-  <label><input type="checkbox" id="snapGrid"> Snap to Grid</label>
+  <div class="meal-grid" id="mealGrid"></div>
 
-  <button id="reset">Reset</button>
-  <button id="screenshot">Screenshot</button>
-</div>
-
-<canvas id="canvas" width="500" height="500"></canvas>
-
-<div class="panel">
-  <strong>Forces:</strong>
-  <div id="forceList"></div>
+  <div class="summary">
+    <h2>Weekly Summary</h2>
+    <p><strong>Total Calories:</strong> <span id="totalCalories">0</span></p>
+    <ul id="selectedMeals"></ul>
+  </div>
 </div>
 
 <script>
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-const center = { x: canvas.width / 2, y: canvas.height / 2 };
-const gridSize = 25;
-
-let mode = "add";
-let forces = [];
-let dragging = false;
-let currentForce = null;
-
-const snapAngle = () => document.getElementById("snapAngle").checked;
-const snapGrid = () => document.getElementById("snapGrid").checked;
-const showNet = () => document.getElementById("netForce").checked;
-
-document.getElementById("addMode").onclick = () => setMode("add");
-document.getElementById("labelMode").onclick = () => setMode("label");
-document.getElementById("deleteMode").onclick = () => setMode("delete");
-
-document.getElementById("reset").onclick = () => {
-  forces = [];
-  draw();
-};
-
-document.getElementById("screenshot").onclick = async () => {
-  canvas.toBlob(async blob => {
-    try {
-      await navigator.clipboard.write([
-        new ClipboardItem({ "image/png": blob })
-      ]);
-      alert("Screenshot copied to clipboard!");
-    } catch {
-      alert("Clipboard not supported.");
+  const meals = [
+    {
+      name: "Grilled Chicken & Rice",
+      calories: 550,
+      ingredients: "Chicken breast, rice, olive oil, spices",
+      instructions: "Grill chicken until cooked. Cook rice. Serve together.",
+      image: "https://images.unsplash.com/photo-1604908177522-429b7e6c99c1"
+    },
+    {
+      name: "Salmon & Vegetables",
+      calories: 600,
+      ingredients: "Salmon, broccoli, carrots, lemon",
+      instructions: "Bake salmon at 400°F for 15 min. Steam vegetables.",
+      image: "https://images.unsplash.com/photo-1617196038431-39c69c37f4f6"
+    },
+    {
+      name: "Pasta with Marinara",
+      calories: 480,
+      ingredients: "Pasta, marinara sauce, garlic",
+      instructions: "Boil pasta. Heat sauce. Mix together.",
+      image: "https://images.unsplash.com/photo-1525755662778-989d0524087e"
     }
+  ];
+
+  const mealGrid = document.getElementById("mealGrid");
+  const totalCaloriesEl = document.getElementById("totalCalories");
+  const selectedMealsEl = document.getElementById("selectedMeals");
+
+  let totalCalories = 0;
+
+  meals.forEach(meal => {
+    const card = document.createElement("div");
+    card.className = "meal-card";
+
+    card.innerHTML = `
+      <img src="${meal.image}" alt="${meal.name}">
+      <div class="content">
+        <h3>${meal.name}</h3>
+        <p><strong>Calories:</strong> ${meal.calories}</p>
+        <p><strong>Ingredients:</strong> ${meal.ingredients}</p>
+        <p><strong>How to Cook:</strong> ${meal.instructions}</p>
+      </div>
+      <button>Add to Week</button>
+    `;
+
+    card.querySelector("button").addEventListener("click", () => {
+      totalCalories += meal.calories;
+      totalCaloriesEl.textContent = totalCalories;
+
+      const li = document.createElement("li");
+      li.textContent = `${meal.name} (${meal.calories} calories)`;
+      selectedMealsEl.appendChild(li);
+    });
+
+    mealGrid.appendChild(card);
   });
-};
-
-function setMode(m) {
-  mode = m;
-  document.querySelectorAll("button").forEach(b => b.classList.remove("active"));
-  if (m === "add") addMode.classList.add("active");
-  if (m === "label") labelMode.classList.add("active");
-  if (m === "delete") deleteMode.classList.add("active");
-}
-
-canvas.addEventListener("mousedown", e => {
-  const pos = getMouse(e);
-  if (mode === "add") {
-    dragging = true;
-    currentForce = { x: pos.x, y: pos.y, label: "" };
-  } else {
-    const f = getForceAt(pos);
-    if (!f) return;
-    if (mode === "label") {
-      const name = prompt("Force label:", f.label || "F");
-      if (name !== null) f.label = name;
-    }
-    if (mode === "delete") {
-      forces = forces.filter(x => x !== f);
-    }
-    draw();
-  }
-});
-
-canvas.addEventListener("mousemove", e => {
-  if (!dragging) return;
-  let pos = getMouse(e);
-
-  let dx = pos.x - center.x;
-  let dy = pos.y - center.y;
-
-  let angle = Math.atan2(dy, dx);
-  let mag = Math.hypot(dx, dy);
-
-  if (snapAngle()) {
-    const step = Math.PI / 12;
-    angle = Math.round(angle / step) * step;
-  }
-
-  dx = Math.cos(angle) * mag;
-  dy = Math.sin(angle) * mag;
-
-  if (snapGrid()) {
-    dx = Math.round(dx / gridSize) * gridSize;
-    dy = Math.round(dy / gridSize) * gridSize;
-  }
-
-  currentForce.x = center.x + dx;
-  currentForce.y = center.y + dy;
-
-  draw();
-  drawArrow(center.x, center.y, currentForce.x, currentForce.y, "#4da3ff");
-});
-
-canvas.addEventListener("mouseup", () => {
-  if (dragging && currentForce) {
-    forces.push(currentForce);
-  }
-  dragging = false;
-  currentForce = null;
-  draw();
-});
-
-function getMouse(e) {
-  const r = canvas.getBoundingClientRect();
-  return { x: e.clientX - r.left, y: e.clientY - r.top };
-}
-
-function getForceAt(pos) {
-  return forces.find(f => {
-    const mx = (center.x + f.x) / 2;
-    const my = (center.y + f.y) / 2;
-    return Math.hypot(pos.x - mx, pos.y - my) < 10;
-  });
-}
-
-function drawGrid() {
-  ctx.strokeStyle = "#2a2f40";
-  ctx.lineWidth = 1;
-  for (let x = 0; x <= canvas.width; x += gridSize) {
-    ctx.beginPath();
-    ctx.moveTo(x, 0);
-    ctx.lineTo(x, canvas.height);
-    ctx.stroke();
-  }
-  for (let y = 0; y <= canvas.height; y += gridSize) {
-    ctx.beginPath();
-    ctx.moveTo(0, y);
-    ctx.lineTo(canvas.width, y);
-    ctx.stroke();
-  }
-}
-
-function drawArrow(x1, y1, x2, y2, color) {
-  const head = 10;
-  const angle = Math.atan2(y2 - y1, x2 - x1);
-  ctx.strokeStyle = color;
-  ctx.fillStyle = color;
-  ctx.lineWidth = 2;
-
-  ctx.beginPath();
-  ctx.moveTo(x1, y1);
-  ctx.lineTo(x2, y2);
-  ctx.stroke();
-
-  ctx.beginPath();
-  ctx.moveTo(x2, y2);
-  ctx.lineTo(x2 - head * Math.cos(angle - Math.PI / 6), y2 - head * Math.sin(angle - Math.PI / 6));
-  ctx.lineTo(x2 - head * Math.cos(angle + Math.PI / 6), y2 - head * Math.sin(angle + Math.PI / 6));
-  ctx.closePath();
-  ctx.fill();
-}
-
-function drawNetForce() {
-  let sx = 0, sy = 0;
-  forces.forEach(f => {
-    sx += f.x - center.x;
-    sy += f.y - center.y;
-  });
-  drawArrow(center.x, center.y, center.x + sx, center.y + sy, "#ff4d4d");
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawGrid();
-
-  ctx.fillStyle = "#e6e6eb";
-  ctx.beginPath();
-  ctx.arc(center.x, center.y, 4, 0, Math.PI * 2);
-  ctx.fill();
-
-  forces.forEach(f => {
-    drawArrow(center.x, center.y, f.x, f.y, "#4da3ff");
-    if (f.label) {
-      ctx.fillStyle = "#e6e6eb";
-      ctx.fillText(f.label, (center.x + f.x) / 2, (center.y + f.y) / 2);
-    }
-  });
-
-  if (showNet()) drawNetForce();
-  updateList();
-}
-
-function updateList() {
-  const list = document.getElementById("forceList");
-  list.innerHTML = "";
-  forces.forEach(f => {
-    const dx = f.x - center.x;
-    const dy = center.y - f.y;
-    const mag = Math.hypot(dx, dy).toFixed(1);
-    const angle = (Math.atan2(dy, dx) * 180 / Math.PI).toFixed(1);
-    const div = document.createElement("div");
-    div.className = "force-item";
-    div.textContent = `${f.label || "Force"}: |F|=${mag}, θ=${angle}°`;
-    list.appendChild(div);
-  });
-}
-
-draw();
 </script>
+
 </body>
 </html>
