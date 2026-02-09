@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Prep & Calorie Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Meal Prep & Calorie Counter</h1>
+    </header>
+
+    <!-- Meal List Section -->
+    <section id="meal-list">
+        <div class="meal" id="meal1">
+            <img src="meal1.jpg" alt="Meal 1 Image">
+            <h2>Meal 1: Chicken Salad</h2>
+            <button onclick="showMealDetails('meal1')">View Details</button>
+        </div>
+        <!-- Repeat for other meals (Meal 2, Meal 3, etc.) -->
+    </section>
+
+    <!-- Modal for displaying meal details -->
+    <div id="meal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Meal Name</h2>
+            <img id="modal-image" src="" alt="Meal Image">
+            <p id="modal-instructions">How to cook this meal...</p>
+            <p id="modal-calories">Calories: 400 kcal</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
