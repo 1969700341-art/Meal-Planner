@@ -1,10 +1,8 @@
 function showMealDetails(mealId) {
-    // Here we would dynamically load meal details based on mealId
     const mealDetails = {
         'meal1': {
             name: 'Chicken Salad',
-            image: 'meal1.jpg',
-            instructions: '
+            instructions: `
                 <h3>Ingredients:</h3>
                 <ul>
                     <li>2 boneless, skinless chicken breasts (about 1 lb)</li>
@@ -29,24 +27,19 @@ function showMealDetails(mealId) {
                     <li><strong>Combine:</strong> Pour the dressing over the chicken and veggie mixture. Toss until everything is well coated.</li>
                     <li><strong>Serve:</strong> Serve the chicken salad on a bed of greens, as a sandwich, or with crackers. Optionally garnish with chopped almonds or walnuts for extra crunch.</li>
                 </ol>
-        ',
+            `,
             calories: '400 kcal'
         },
-        // Add more meals here in the same format
+        // Add other meals here...
     };
 
     const meal = mealDetails[mealId];
 
     // Update modal with meal details
     document.getElementById('modal-title').innerText = meal.name;
-    document.getElementById('modal-instructions').innerText = meal.instructions;
+    document.getElementById('modal-instructions').innerHTML = meal.instructions; // Use innerHTML to allow HTML content
     document.getElementById('modal-calories').innerText = `Calories: ${meal.calories}`;
 
     // Show the modal
     document.getElementById('meal-modal').style.display = "block";
-}
-
-function closeModal() {
-    // Close the modal
-    document.getElementById('meal-modal').style.display = "none";
 }
