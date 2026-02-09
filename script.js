@@ -43,3 +43,7 @@ function showMealDetails(mealId) {
     // Show the modal
     document.getElementById('meal-modal').style.display = "block";
 }
+
+function closeModal() {
+    document.getElementById("meal-modal").style.display = "none";
+}
