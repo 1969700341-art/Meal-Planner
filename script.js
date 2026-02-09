@@ -14,7 +14,6 @@ function showMealDetails(mealId) {
 
     // Update modal with meal details
     document.getElementById('modal-title').innerText = meal.name;
-    document.getElementById('modal-image').src = meal.image;
     document.getElementById('modal-instructions').innerText = meal.instructions;
     document.getElementById('modal-calories').innerText = `Calories: ${meal.calories}`;
 
