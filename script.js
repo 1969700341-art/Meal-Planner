@@ -4,7 +4,9 @@ function showMealDetails(mealId) {
         'meal1': {
             name: 'Chicken Salad',
             image: 'meal1.jpg',
-            instructions: ' <li>2 boneless, skinless chicken breasts (about 1 lb)</li>
+            instructions: ' <h3>Ingredients:</h3>
+                <ul>
+                    <li>2 boneless, skinless chicken breasts (about 1 lb)</li>
                     <li>1 tablespoon olive oil</li>
                     <li>Salt and pepper to taste</li>
                     <li>1 tablespoon mustard (optional)</li>
@@ -25,7 +27,8 @@ function showMealDetails(mealId) {
                     <li><strong>Make the Dressing:</strong> In a separate bowl, mix the mayonnaise, mustard, and honey (optional). Adjust the flavor with salt and pepper. Add a bit of Dijon mustard if you prefer a tangier taste.</li>
                     <li><strong>Combine:</strong> Pour the dressing over the chicken and veggie mixture. Toss until everything is well coated.</li>
                     <li><strong>Serve:</strong> Serve the chicken salad on a bed of greens, as a sandwich, or with crackers. Optionally garnish with chopped almonds or walnuts for extra crunch.</li>
-                </ol>,
+                </ol>
+            `,'
             calories: '400 kcal'
         },
         // Add more meals here in the same format
