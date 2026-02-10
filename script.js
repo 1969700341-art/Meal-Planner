@@ -5,42 +5,108 @@ function showMealDetails(mealId) {
             instructions: `
                 <h3>Ingredients:</h3>
                 <ul>
-                    <li>2 boneless, skinless chicken breasts (about 1 lb)</li>
-                    <li>1 tablespoon olive oil</li>
-                    <li>Salt and pepper to taste</li>
-                    <li>1 tablespoon mustard (optional)</li>
-                    <li>1 tablespoon honey (optional)</li>
-                    <li>1/2 cup mayonnaise</li>
-                    <li>1 tablespoon Dijon mustard (optional)</li>
-                    <li>1/4 cup celery (chopped)</li>
-                    <li>1/4 cup red onion (finely chopped)</li>
-                    <li>1/2 cup grapes (cut in halves or quarters)</li>
-                    <li>1/2 cup chopped apples (optional)</li>
-                    <li>1/4 cup chopped almonds or walnuts (optional)</li>
+                    <li>Chicken breast</li>
+                    <li>Mayonnaise</li>
+                    <li>Celery</li>
+                    <li>Red onion</li>
+                    <li>Grapes</li>
                 </ul>
-
                 <h3>Instructions:</h3>
                 <ol>
-                    <li><strong>Cook the Chicken:</strong> Season the chicken breasts with salt and pepper. Heat a pan over medium heat and add 1 tablespoon of olive oil. Cook the chicken for about 6-7 minutes on each side until fully cooked (internal temperature should reach 165°F or 75°C). Let the chicken rest for a few minutes before shredding or cutting it into small pieces.</li>
-                    <li><strong>Prepare the Salad Base:</strong> In a large bowl, combine the celery, red onion, grapes, and apples (if using). Add the shredded or diced chicken to the bowl.</li>
-                    <li><strong>Make the Dressing:</strong> In a separate bowl, mix the mayonnaise, mustard, and honey (optional). Adjust the flavor with salt and pepper. Add a bit of Dijon mustard if you prefer a tangier taste.</li>
-                    <li><strong>Combine:</strong> Pour the dressing over the chicken and veggie mixture. Toss until everything is well coated.</li>
-                    <li><strong>Serve:</strong> Serve the chicken salad on a bed of greens, as a sandwich, or with crackers. Optionally garnish with chopped almonds or walnuts for extra crunch.</li>
+                    <li>Cook and dice chicken.</li>
+                    <li>Mix all ingredients in a bowl.</li>
+                    <li>Serve chilled.</li>
                 </ol>
             `,
             calories: '400 kcal'
         },
-        // Add other meals here...
+
+        'meal2': {
+            name: 'Grilled Salmon',
+            instructions: `
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Salmon fillet</li>
+                    <li>Olive oil</li>
+                    <li>Lemon</li>
+                    <li>Garlic</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Season salmon with oil, garlic, and lemon.</li>
+                    <li>Grill for 4–5 minutes per side.</li>
+                    <li>Serve with vegetables.</li>
+                </ol>
+            `,
+            calories: '520 kcal'
+        },
+
+        'meal3': {
+            name: 'Beef Stir Fry',
+            instructions: `
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Beef strips</li>
+                    <li>Bell peppers</li>
+                    <li>Soy sauce</li>
+                    <li>Garlic</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Cook beef in a hot pan.</li>
+                    <li>Add vegetables and sauce.</li>
+                    <li>Stir fry until tender.</li>
+                </ol>
+            `,
+            calories: '600 kcal'
+        },
+
+        'meal4': {
+            name: 'Veggie Pasta',
+            instructions: `
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Pasta</li>
+                    <li>Zucchini</li>
+                    <li>Tomatoes</li>
+                    <li>Olive oil</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Boil pasta.</li>
+                    <li>Sauté vegetables.</li>
+                    <li>Combine and serve.</li>
+                </ol>
+            `,
+            calories: '450 kcal'
+        },
+
+        'meal5': {
+            name: 'Turkey Wrap',
+            instructions: `
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>Whole wheat wrap</li>
+                    <li>Turkey slices</li>
+                    <li>Lettuce</li>
+                    <li>Cheese</li>
+                </ul>
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Layer ingredients on wrap.</li>
+                    <li>Roll tightly.</li>
+                    <li>Slice and serve.</li>
+                </ol>
+            `,
+            calories: '350 kcal'
+        }
     };
 
     const meal = mealDetails[mealId];
 
-    // Update modal with meal details
     document.getElementById('modal-title').innerText = meal.name;
-    document.getElementById('modal-instructions').innerHTML = meal.instructions; // Use innerHTML to allow HTML content
+    document.getElementById('modal-instructions').innerHTML = meal.instructions;
     document.getElementById('modal-calories').innerText = `Calories: ${meal.calories}`;
-
-    // Show the modal
     document.getElementById('meal-modal').style.display = "block";
 }
 
