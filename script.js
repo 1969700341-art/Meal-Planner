@@ -47,25 +47,36 @@ function showMealDetails(mealId) {
     calories: '520 kcal'
         },
 
-        'meal3': {
-            name: 'Beef Stir Fry',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>Beef strips</li>
-                    <li>Bell peppers</li>
-                    <li>Soy sauce</li>
-                    <li>Garlic</li>
-                </ul>
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>Cook beef in a hot pan.</li>
-                    <li>Add vegetables and sauce.</li>
-                    <li>Stir fry until tender.</li>
-                </ol>
-            `,
-            calories: '600 kcal'
-        },
+'meal3': {
+    name: 'Beef Stir Fry',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>8 oz (225 g) flank steak, thinly sliced</li>
+            <li>1 tablespoon vegetable oil</li>
+            <li>1 red bell pepper, sliced</li>
+            <li>1 green bell pepper, sliced</li>
+            <li>1 cup broccoli florets</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 tablespoon fresh ginger, grated</li>
+            <li>3 tablespoons soy sauce</li>
+            <li>1 tablespoon oyster sauce</li>
+            <li>1 teaspoon cornstarch</li>
+            <li>1/4 cup water</li>
+        </ul>
+
+        <h3>Instructions:</h3>
+        <ol>
+            <li>In a small bowl, mix soy sauce, oyster sauce, cornstarch, and water. Set aside.</li>
+            <li>Heat vegetable oil in a large pan or wok over high heat.</li>
+            <li>Add beef and cook for 2–3 minutes until browned. Remove and set aside.</li>
+            <li>Add garlic and ginger, then vegetables. Stir fry for 3–4 minutes.</li>
+            <li>Return beef to the pan, pour in sauce, and stir until thickened.</li>
+            <li>Remove from heat and serve hot.</li>
+        </ol>
+    `,
+    calories: '610 kcal'
+},
 
         'meal4': {
             name: 'Veggie Pasta',
