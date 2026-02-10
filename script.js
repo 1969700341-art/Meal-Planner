@@ -22,23 +22,29 @@ function showMealDetails(mealId) {
         },
 
         'meal2': {
-            name: 'Grilled Salmon',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>Salmon fillet</li>
-                    <li>Olive oil</li>
-                    <li>Lemon</li>
-                    <li>Garlic</li>
-                </ul>
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>Season salmon with oil, garlic, and lemon.</li>
-                    <li>Grill for 4–5 minutes per side.</li>
-                    <li>Serve with vegetables.</li>
-                </ol>
-            `,
-            calories: '520 kcal'
+    name: 'Grilled Salmon',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 salmon fillet (6 oz / 170 g)</li>
+            <li>1 tablespoon olive oil</li>
+            <li>1 clove garlic (minced)</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/4 teaspoon black pepper</li>
+            <li>1/2 teaspoon paprika</li>
+            <li>1 lemon (sliced)</li>
+        </ul>
+
+        <h3>Instructions:</h3>
+        <ol>
+            <li>Preheat grill or grill pan to medium-high heat.</li>
+            <li>Brush salmon with olive oil and season with garlic, salt, pepper, and paprika.</li>
+            <li>Place salmon skin-side down on the grill.</li>
+            <li>Grill for 4–5 minutes per side, until fish flakes easily with a fork.</li>
+            <li>Remove from heat and serve with lemon slices.</li>
+        </ol>
+    `,
+    calories: '520 kcal'
         },
 
         'meal3': {
