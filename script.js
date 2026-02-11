@@ -1,25 +1,55 @@
 function showMealDetails(mealId) {
     const mealDetails = {
-        'meal1': {
-            name: 'Chicken Salad',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>Chicken breast</li>
-                    <li>Mayonnaise</li>
-                    <li>Celery</li>
-                    <li>Red onion</li>
-                    <li>Grapes</li>
-                </ul>
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>Cook and dice chicken.</li>
-                    <li>Mix all ingredients in a bowl.</li>
-                    <li>Serve chilled.</li>
-                </ol>
-            `,
-            calories: '400 kcal'
-        },
+'meal1': {
+    name: 'Chicken Salad',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>2 boneless, skinless chicken breasts (about 12 oz / 340 g total)</li>
+            <li>1/3 cup mayonnaise (or Greek yogurt for lighter option)</li>
+            <li>1 celery stalk, finely chopped</li>
+            <li>2 tablespoons red onion, finely diced</li>
+            <li>1/3 cup red grapes, halved</li>
+            <li>1 tablespoon Dijon mustard</li>
+            <li>1 teaspoon lemon juice</li>
+            <li>Salt and black pepper to taste</li>
+            <li>Optional: chopped parsley or sliced almonds</li>
+        </ul>
+
+        <h3>Cooking Instructions (Chicken):</h3>
+        <ol>
+            <li>Bring a pot of lightly salted water to a boil.</li>
+            <li>Add chicken breasts and reduce heat to a gentle simmer.</li>
+            <li>Cook for 12–15 minutes, or until internal temperature reaches 165°F (75°C).</li>
+            <li>Remove chicken and let cool completely.</li>
+            <li>Dice or shred into small bite-sized pieces.</li>
+        </ol>
+
+        <h3>Assembly Instructions:</h3>
+        <ol>
+            <li>In a large bowl, combine mayonnaise, Dijon mustard, and lemon juice.</li>
+            <li>Add chopped celery, red onion, and grapes.</li>
+            <li>Fold in diced chicken and mix until evenly coated.</li>
+            <li>Season with salt and pepper to taste.</li>
+            <li>Refrigerate for at least 30 minutes before serving for best flavor.</li>
+        </ol>
+
+        <h3>Serving Suggestions:</h3>
+        <ul>
+            <li>Serve on whole grain bread</li>
+            <li>Wrap in a tortilla</li>
+            <li>Spoon over mixed greens</li>
+            <li>Eat with crackers</li>
+        </ul>
+
+        <h3>Meal Prep & Storage:</h3>
+        <ul>
+            <li>Store in airtight container in refrigerator up to 4 days.</li>
+            <li>Do not freeze (mayonnaise texture breaks down).</li>
+        </ul>
+    `,
+    calories: 'Approx. 420 kcal per serving'
+},
 
         'meal2': {
             name: 'Grilled Salmon',
