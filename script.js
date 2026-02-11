@@ -1,3 +1,5 @@
+document.getElementById('meal-modal').classList.remove('show');
+
 function showMealDetails(mealId) {
     const mealDetails = {
 'meal1': {
@@ -172,9 +174,10 @@ function showMealDetails(mealId) {
     document.getElementById('modal-title').innerText = meal.name;
     document.getElementById('modal-instructions').innerHTML = meal.instructions;
     document.getElementById('modal-calories').innerText = `Calories: ${meal.calories}`;
-    document.getElementById('meal-modal').style.display = "flex";
+
+    document.getElementById('meal-modal').classList.add('show');
 }
 
 function closeModal() {
-    document.getElementById("meal-modal").style.display = "none";
+    document.getElementById("meal-modal").classList.remove("show");
 }
