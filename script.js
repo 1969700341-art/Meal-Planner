@@ -53,32 +53,58 @@ function showMealDetails(mealId) {
     calories: 'Approx. 420 kcal per serving'
 },
 
-        'meal2': {
-            name: 'Grilled Salmon',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>1 salmon fillet (6 oz / 170 g)</li>
-                    <li>1 tablespoon olive oil</li>
-                    <li>1 clove garlic (minced)</li>
-                    <li>1/2 teaspoon salt</li>
-                    <li>1/4 teaspoon black pepper</li>
-                    <li>1/2 teaspoon paprika</li>
-                    <li>1 lemon (sliced)</li>
-                </ul>
+'meal2': {
+    name: 'Grilled Salmon',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>2 salmon fillets (6 oz / 170 g each)</li>
+            <li>1 tablespoon olive oil</li>
+            <li>2 cloves garlic, minced</li>
+            <li>1 tablespoon fresh lemon juice</li>
+            <li>1 teaspoon lemon zest</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1/4 teaspoon black pepper</li>
+            <li>1/2 teaspoon paprika</li>
+            <li>1 tablespoon chopped fresh parsley (optional)</li>
+            <li>Lemon wedges for serving</li>
+        </ul>
 
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>Preheat grill or grill pan to medium-high heat.</li>
-                    <li>Brush salmon with olive oil and season with garlic, salt, pepper, and paprika.</li>
-                    <li>Place salmon skin-side down on the grill.</li>
-                    <li>Grill for 4–5 minutes per side, until fish flakes easily with a fork.</li>
-                    <li>Remove from heat and serve with lemon slices.</li>
-                </ol>
-            `,
-            calories: '520 kcal'
-        },
+        <h3>Preparation:</h3>
+        <ol>
+            <li>Pat salmon fillets dry with paper towels.</li>
+            <li>In a small bowl, mix olive oil, garlic, lemon juice, lemon zest, salt, pepper, and paprika.</li>
+            <li>Brush mixture evenly over both sides of salmon.</li>
+            <li>Let marinate 10–15 minutes at room temperature.</li>
+        </ol>
 
+        <h3>Grilling Instructions:</h3>
+        <ol>
+            <li>Preheat grill to medium-high heat (about 400°F / 200°C).</li>
+            <li>Lightly oil grill grates to prevent sticking.</li>
+            <li>Place salmon skin-side down on grill.</li>
+            <li>Close lid and grill 4–5 minutes.</li>
+            <li>Carefully flip and cook another 3–4 minutes.</li>
+            <li>Salmon is done when internal temperature reaches 145°F (63°C) and flakes easily with a fork.</li>
+            <li>Remove from grill and garnish with parsley and lemon wedges.</li>
+        </ol>
+
+        <h3>Serving Suggestions:</h3>
+        <ul>
+            <li>Serve with roasted vegetables</li>
+            <li>Pair with quinoa or brown rice</li>
+            <li>Add a fresh side salad</li>
+        </ul>
+
+        <h3>Meal Prep & Storage:</h3>
+        <ul>
+            <li>Store in airtight container in refrigerator up to 3 days.</li>
+            <li>Reheat gently to avoid drying out.</li>
+            <li>Can be flaked cold over salads.</li>
+        </ul>
+    `,
+    calories: 'Approx. 520 kcal per serving'
+},
         'meal3': {
             name: 'Beef Stir Fry',
             instructions: `
