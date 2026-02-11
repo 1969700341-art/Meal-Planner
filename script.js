@@ -105,94 +105,187 @@ function showMealDetails(mealId) {
     `,
     calories: 'Approx. 520 kcal per serving'
 },
-        'meal3': {
-            name: 'Beef Stir Fry',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>8 oz (225 g) flank steak, thinly sliced</li>
-                    <li>1 tablespoon vegetable oil</li>
-                    <li>1 red bell pepper, sliced</li>
-                    <li>1 green bell pepper, sliced</li>
-                    <li>1 cup broccoli florets</li>
-                    <li>2 cloves garlic, minced</li>
-                    <li>1 tablespoon fresh ginger, grated</li>
-                    <li>3 tablespoons soy sauce</li>
-                    <li>1 tablespoon oyster sauce</li>
-                    <li>1 teaspoon cornstarch</li>
-                    <li>1/4 cup water</li>
-                </ul>
+'meal3': {
+    name: 'Beef Stir Fry',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 lb (450 g) flank steak, thinly sliced against the grain</li>
+            <li>1 tablespoon vegetable oil (divided)</li>
+            <li>1 red bell pepper, sliced</li>
+            <li>1 green bell pepper, sliced</li>
+            <li>1 cup broccoli florets</li>
+            <li>1 medium carrot, thinly sliced</li>
+            <li>3 cloves garlic, minced</li>
+            <li>1 tablespoon fresh ginger, grated</li>
+            <li>2 green onions, sliced (optional)</li>
+        </ul>
 
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>In a small bowl, mix soy sauce, oyster sauce, cornstarch, and water. Set aside.</li>
-                    <li>Heat vegetable oil in a large pan or wok over high heat.</li>
-                    <li>Add beef and cook for 2–3 minutes until browned. Remove and set aside.</li>
-                    <li>Add garlic and ginger, then vegetables. Stir fry for 3–4 minutes.</li>
-                    <li>Return beef to the pan, pour in sauce, and stir until thickened.</li>
-                    <li>Remove from heat and serve hot over rice or noodles.</li>
-                </ol>
-            `,
-            calories: '610 kcal'
-        },
+        <h3>Stir Fry Sauce:</h3>
+        <ul>
+            <li>1/4 cup low-sodium soy sauce</li>
+            <li>1 tablespoon oyster sauce</li>
+            <li>1 tablespoon hoisin sauce</li>
+            <li>1 teaspoon sesame oil</li>
+            <li>1 teaspoon cornstarch</li>
+            <li>1/4 cup beef broth or water</li>
+            <li>1 teaspoon brown sugar (optional)</li>
+        </ul>
 
-        'meal4': {
-            name: 'Veggie Pasta',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>8 oz (225 g) penne or spaghetti</li>
-                    <li>1 tablespoon olive oil</li>
-                    <li>1 zucchini, sliced</li>
-                    <li>1 cup cherry tomatoes, halved</li>
-                    <li>1/2 red bell pepper, sliced</li>
-                    <li>2 cloves garlic, minced</li>
-                    <li>1/2 teaspoon Italian seasoning</li>
-                    <li>Salt and pepper to taste</li>
-                    <li>1/4 cup grated Parmesan cheese</li>
-                </ul>
+        <h3>Preparation:</h3>
+        <ol>
+            <li>Slice steak thinly against the grain for tenderness.</li>
+            <li>In a small bowl, whisk together all sauce ingredients until smooth. Set aside.</li>
+            <li>Prepare and chop all vegetables before cooking (stir frying moves quickly).</li>
+        </ol>
 
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>Bring a large pot of salted water to a boil and cook pasta according to package instructions. Drain and set aside.</li>
-                    <li>Heat olive oil in a large skillet over medium heat.</li>
-                    <li>Add garlic and sauté for 30 seconds until fragrant.</li>
-                    <li>Add zucchini, bell pepper, and tomatoes. Cook for 4–5 minutes until tender.</li>
-                    <li>Season with Italian seasoning, salt, and pepper.</li>
-                    <li>Add cooked pasta to the skillet and toss to combine.</li>
-                    <li>Top with Parmesan cheese and serve warm.</li>
-                </ol>
-            `,
-            calories: '450 kcal'
-        },
+        <h3>Cooking Instructions:</h3>
+        <ol>
+            <li>Heat a large skillet or wok over high heat.</li>
+            <li>Add 1/2 tablespoon oil.</li>
+            <li>Add beef in a single layer. Sear 2–3 minutes until browned.</li>
+            <li>Remove beef from pan and set aside.</li>
+            <li>Add remaining oil to pan.</li>
+            <li>Add garlic and ginger; cook 30 seconds until fragrant.</li>
+            <li>Add vegetables and stir fry 3–4 minutes until tender-crisp.</li>
+            <li>Return beef to the pan.</li>
+            <li>Pour in sauce and stir continuously until thickened (1–2 minutes).</li>
+            <li>Remove from heat and garnish with green onions.</li>
+        </ol>
 
-        'meal5': {
-            name: 'Turkey Wrap',
-            instructions: `
-                <h3>Ingredients:</h3>
-                <ul>
-                    <li>1 large whole wheat tortilla</li>
-                    <li>4 oz sliced turkey breast</li>
-                    <li>1 slice cheddar or Swiss cheese</li>
-                    <li>1/4 avocado, sliced</li>
-                    <li>1 leaf romaine lettuce</li>
-                    <li>2 tomato slices</li>
-                    <li>1 tablespoon hummus or mustard</li>
-                    <li>Salt and pepper to taste</li>
-                </ul>
+        <h3>Serving Suggestions:</h3>
+        <ul>
+            <li>Serve over steamed white or brown rice</li>
+            <li>Pair with rice noodles</li>
+            <li>Serve in lettuce wraps for a low-carb option</li>
+        </ul>
 
-                <h3>Instructions:</h3>
-                <ol>
-                    <li>Lay the tortilla flat on a clean surface.</li>
-                    <li>Spread hummus or mustard evenly over the center.</li>
-                    <li>Layer turkey, cheese, avocado, lettuce, and tomato.</li>
-                    <li>Season lightly with salt and pepper.</li>
-                    <li>Fold in the sides and roll tightly from the bottom.</li>
-                    <li>Slice in half and serve immediately or wrap for meal prep.</li>
-                </ol>
-            `,
-            calories: '350 kcal'
-        }
+        <h3>Meal Prep & Storage:</h3>
+        <ul>
+            <li>Store in airtight container up to 4 days in refrigerator.</li>
+            <li>Reheat in skillet for best texture.</li>
+            <li>Freezes well up to 2 months.</li>
+        </ul>
+    `,
+    calories: 'Approx. 620 kcal per serving (without rice)'
+},
+
+'meal4': {
+    name: 'Veggie Pasta',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>12 oz (340 g) penne or spaghetti</li>
+            <li>1 tablespoon olive oil</li>
+            <li>1 zucchini, sliced into half-moons</li>
+            <li>1 red bell pepper, sliced</li>
+            <li>1 cup cherry tomatoes, halved</li>
+            <li>1 cup fresh spinach</li>
+            <li>3 cloves garlic, minced</li>
+            <li>1/2 teaspoon Italian seasoning</li>
+            <li>1/4 teaspoon red pepper flakes (optional)</li>
+            <li>Salt and black pepper to taste</li>
+            <li>1/3 cup grated Parmesan cheese</li>
+            <li>Fresh basil for garnish (optional)</li>
+        </ul>
+
+        <h3>Preparation:</h3>
+        <ol>
+            <li>Wash and chop all vegetables before starting.</li>
+            <li>Bring a large pot of water to a rolling boil.</li>
+            <li>Add 1 tablespoon salt to the water (this flavors the pasta).</li>
+        </ol>
+
+        <h3>Cooking Instructions:</h3>
+        <ol>
+            <li>Add pasta to boiling water and cook according to package instructions until al dente (usually 8–10 minutes).</li>
+            <li>Reserve 1/2 cup pasta water before draining.</li>
+            <li>Heat olive oil in a large skillet over medium heat.</li>
+            <li>Add garlic and sauté 30 seconds until fragrant.</li>
+            <li>Add zucchini and bell pepper; cook 3–4 minutes.</li>
+            <li>Add cherry tomatoes and cook until slightly softened.</li>
+            <li>Stir in spinach and cook until wilted.</li>
+            <li>Season with Italian seasoning, red pepper flakes, salt, and pepper.</li>
+            <li>Add drained pasta to skillet and toss to combine.</li>
+            <li>If needed, add reserved pasta water a few tablespoons at a time to loosen sauce.</li>
+            <li>Stir in Parmesan cheese until melted and evenly distributed.</li>
+            <li>Remove from heat and garnish with fresh basil.</li>
+        </ol>
+
+        <h3>Serving Suggestions:</h3>
+        <ul>
+            <li>Add grilled chicken for extra protein</li>
+            <li>Top with extra Parmesan or feta cheese</li>
+            <li>Serve with garlic bread and a side salad</li>
+        </ul>
+
+        <h3>Meal Prep & Storage:</h3>
+        <ul>
+            <li>Store in airtight container up to 4 days in refrigerator.</li>
+            <li>Add a splash of water before reheating to prevent dryness.</li>
+            <li>Freezes up to 2 months (texture may soften slightly).</li>
+        </ul>
+    `,
+    calories: 'Approx. 480 kcal per serving'
+},
+
+'meal5': {
+    name: 'Turkey Wrap',
+    instructions: `
+        <h3>Ingredients:</h3>
+        <ul>
+            <li>1 large whole wheat tortilla (10-inch)</li>
+            <li>4 oz sliced turkey breast (deli or roasted)</li>
+            <li>1 slice Swiss or cheddar cheese</li>
+            <li>1/4 avocado, sliced</li>
+            <li>1 leaf romaine lettuce</li>
+            <li>2 slices tomato</li>
+            <li>2 tablespoons shredded carrots (optional)</li>
+            <li>1 tablespoon hummus, mayonnaise, or mustard</li>
+            <li>Salt and black pepper to taste</li>
+        </ul>
+
+        <h3>Preparation:</h3>
+        <ol>
+            <li>Lay tortilla flat on a clean surface or cutting board.</li>
+            <li>Spread hummus, mayo, or mustard evenly over the center.</li>
+            <li>Layer turkey evenly across the middle.</li>
+            <li>Add cheese slice on top of turkey.</li>
+        </ol>
+
+        <h3>Assembly Instructions:</h3>
+        <ol>
+            <li>Add avocado slices, lettuce, tomato, and shredded carrots.</li>
+            <li>Season lightly with salt and black pepper.</li>
+            <li>Fold in both sides of the tortilla.</li>
+            <li>Roll tightly from the bottom up to form a wrap.</li>
+            <li>Slice in half diagonally before serving.</li>
+        </ol>
+
+        <h3>Optional Toasted Version:</h3>
+        <ol>
+            <li>Heat a skillet over medium heat.</li>
+            <li>Place wrap seam-side down in the pan.</li>
+            <li>Cook 2–3 minutes per side until lightly golden and cheese melts.</li>
+            <li>Remove, rest 1 minute, then slice.</li>
+        </ol>
+
+        <h3>Serving Suggestions:</h3>
+        <ul>
+            <li>Serve with baked sweet potato fries</li>
+            <li>Pair with a side salad</li>
+            <li>Add fresh fruit for a balanced meal</li>
+        </ul>
+
+        <h3>Meal Prep & Storage:</h3>
+        <ul>
+            <li>Wrap tightly in foil or plastic wrap for meal prep.</li>
+            <li>Store in refrigerator up to 3 days.</li>
+            <li>If meal prepping, add avocado just before eating to prevent browning.</li>
+        </ul>
+    `,
+    calories: 'Approx. 390 kcal per wrap'
+}
     };
 
     const meal = mealDetails[mealId];
