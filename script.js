@@ -118,10 +118,10 @@ function showMealDetails(mealId) {
             <li>1 medium carrot, thinly sliced</li>
             <li>3 cloves garlic, minced</li>
             <li>1 tablespoon fresh ginger, grated</li>
-            <li>2 green onions, sliced (optional)</li>
+            <li>2 green onions, sliced (optional garnish)</li>
         </ul>
 
-        <h3>Stir Fry Sauce:</h3>
+        <h3>Sauce:</h3>
         <ul>
             <li>1/4 cup low-sodium soy sauce</li>
             <li>1 tablespoon oyster sauce</li>
@@ -134,30 +134,31 @@ function showMealDetails(mealId) {
 
         <h3>Preparation:</h3>
         <ol>
-            <li>Slice steak thinly against the grain for tenderness.</li>
-            <li>In a small bowl, whisk together all sauce ingredients until smooth. Set aside.</li>
-            <li>Prepare and chop all vegetables before cooking (stir frying moves quickly).</li>
+            <li>Slice beef thinly against the grain for tenderness.</li>
+            <li>Whisk together all sauce ingredients in a small bowl until smooth.</li>
+            <li>Prep and chop all vegetables before cooking (stir frying is fast).</li>
         </ol>
 
         <h3>Cooking Instructions:</h3>
         <ol>
-            <li>Heat a large skillet or wok over high heat.</li>
+            <li>Heat a large skillet or wok over high heat until very hot.</li>
             <li>Add 1/2 tablespoon oil.</li>
-            <li>Add beef in a single layer. Sear 2–3 minutes until browned.</li>
+            <li>Add beef in a single layer and sear 2–3 minutes without stirring.</li>
+            <li>Flip and cook another 1–2 minutes until browned (internal temp ~145°F / 63°C for medium).</li>
             <li>Remove beef from pan and set aside.</li>
-            <li>Add remaining oil to pan.</li>
+            <li>Add remaining oil to the pan.</li>
             <li>Add garlic and ginger; cook 30 seconds until fragrant.</li>
             <li>Add vegetables and stir fry 3–4 minutes until tender-crisp.</li>
             <li>Return beef to the pan.</li>
-            <li>Pour in sauce and stir continuously until thickened (1–2 minutes).</li>
+            <li>Pour in sauce and stir constantly until it thickens (about 1–2 minutes).</li>
             <li>Remove from heat and garnish with green onions.</li>
         </ol>
 
         <h3>Serving Suggestions:</h3>
         <ul>
-            <li>Serve over steamed white or brown rice</li>
-            <li>Pair with rice noodles</li>
-            <li>Serve in lettuce wraps for a low-carb option</li>
+            <li>Serve over white or brown rice</li>
+            <li>Serve over rice noodles</li>
+            <li>Use lettuce cups for a low-carb option</li>
         </ul>
 
         <h3>Meal Prep & Storage:</h3>
@@ -169,7 +170,6 @@ function showMealDetails(mealId) {
     `,
     calories: 'Approx. 620 kcal per serving (without rice)'
 },
-
 'meal4': {
     name: 'Veggie Pasta',
     instructions: `
@@ -180,6 +180,7 @@ function showMealDetails(mealId) {
             <li>1 zucchini, sliced into half-moons</li>
             <li>1 red bell pepper, sliced</li>
             <li>1 cup cherry tomatoes, halved</li>
+            <li>1 cup broccoli florets</li>
             <li>1 cup fresh spinach</li>
             <li>3 cloves garlic, minced</li>
             <li>1/2 teaspoon Italian seasoning</li>
@@ -193,37 +194,38 @@ function showMealDetails(mealId) {
         <ol>
             <li>Wash and chop all vegetables before starting.</li>
             <li>Bring a large pot of water to a rolling boil.</li>
-            <li>Add 1 tablespoon salt to the water (this flavors the pasta).</li>
+            <li>Add 1 tablespoon salt to the water to properly season the pasta.</li>
         </ol>
 
         <h3>Cooking Instructions:</h3>
         <ol>
-            <li>Add pasta to boiling water and cook according to package instructions until al dente (usually 8–10 minutes).</li>
+            <li>Add pasta to boiling water and cook according to package instructions until al dente (8–10 minutes).</li>
             <li>Reserve 1/2 cup pasta water before draining.</li>
             <li>Heat olive oil in a large skillet over medium heat.</li>
-            <li>Add garlic and sauté 30 seconds until fragrant.</li>
+            <li>Add garlic and sauté for 30 seconds until fragrant.</li>
             <li>Add zucchini and bell pepper; cook 3–4 minutes.</li>
+            <li>Add broccoli and cook an additional 2 minutes.</li>
             <li>Add cherry tomatoes and cook until slightly softened.</li>
             <li>Stir in spinach and cook until wilted.</li>
             <li>Season with Italian seasoning, red pepper flakes, salt, and pepper.</li>
             <li>Add drained pasta to skillet and toss to combine.</li>
-            <li>If needed, add reserved pasta water a few tablespoons at a time to loosen sauce.</li>
+            <li>Add a few tablespoons of reserved pasta water if needed to loosen and bind everything together.</li>
             <li>Stir in Parmesan cheese until melted and evenly distributed.</li>
             <li>Remove from heat and garnish with fresh basil.</li>
         </ol>
 
         <h3>Serving Suggestions:</h3>
         <ul>
-            <li>Add grilled chicken for extra protein</li>
+            <li>Add grilled chicken or shrimp for extra protein</li>
             <li>Top with extra Parmesan or feta cheese</li>
-            <li>Serve with garlic bread and a side salad</li>
+            <li>Serve with garlic bread or side salad</li>
         </ul>
 
         <h3>Meal Prep & Storage:</h3>
         <ul>
             <li>Store in airtight container up to 4 days in refrigerator.</li>
-            <li>Add a splash of water before reheating to prevent dryness.</li>
-            <li>Freezes up to 2 months (texture may soften slightly).</li>
+            <li>Add a splash of water before reheating to prevent drying out.</li>
+            <li>Freezes up to 2 months (vegetable texture may soften slightly).</li>
         </ul>
     `,
     calories: 'Approx. 480 kcal per serving'
@@ -235,11 +237,11 @@ function showMealDetails(mealId) {
         <h3>Ingredients:</h3>
         <ul>
             <li>1 large whole wheat tortilla (10-inch)</li>
-            <li>4 oz sliced turkey breast (deli or roasted)</li>
+            <li>4 oz sliced roasted turkey breast</li>
             <li>1 slice Swiss or cheddar cheese</li>
             <li>1/4 avocado, sliced</li>
             <li>1 leaf romaine lettuce</li>
-            <li>2 slices tomato</li>
+            <li>2 tomato slices</li>
             <li>2 tablespoons shredded carrots (optional)</li>
             <li>1 tablespoon hummus, mayonnaise, or mustard</li>
             <li>Salt and black pepper to taste</li>
@@ -248,26 +250,26 @@ function showMealDetails(mealId) {
         <h3>Preparation:</h3>
         <ol>
             <li>Lay tortilla flat on a clean surface or cutting board.</li>
-            <li>Spread hummus, mayo, or mustard evenly over the center.</li>
-            <li>Layer turkey evenly across the middle.</li>
+            <li>Spread hummus, mayo, or mustard evenly across the center, leaving edges clear.</li>
+            <li>Layer turkey slices evenly over the spread.</li>
             <li>Add cheese slice on top of turkey.</li>
         </ol>
 
         <h3>Assembly Instructions:</h3>
         <ol>
-            <li>Add avocado slices, lettuce, tomato, and shredded carrots.</li>
+            <li>Add avocado slices, lettuce, tomato, and carrots.</li>
             <li>Season lightly with salt and black pepper.</li>
             <li>Fold in both sides of the tortilla.</li>
-            <li>Roll tightly from the bottom up to form a wrap.</li>
+            <li>Roll tightly from the bottom upward to form a secure wrap.</li>
             <li>Slice in half diagonally before serving.</li>
         </ol>
 
-        <h3>Optional Toasted Version:</h3>
+        <h3>Optional Toasted Cooking Method:</h3>
         <ol>
             <li>Heat a skillet over medium heat.</li>
             <li>Place wrap seam-side down in the pan.</li>
             <li>Cook 2–3 minutes per side until lightly golden and cheese melts.</li>
-            <li>Remove, rest 1 minute, then slice.</li>
+            <li>Remove from heat and let rest 1 minute before slicing.</li>
         </ol>
 
         <h3>Serving Suggestions:</h3>
@@ -281,7 +283,7 @@ function showMealDetails(mealId) {
         <ul>
             <li>Wrap tightly in foil or plastic wrap for meal prep.</li>
             <li>Store in refrigerator up to 3 days.</li>
-            <li>If meal prepping, add avocado just before eating to prevent browning.</li>
+            <li>Add avocado just before eating to prevent browning.</li>
         </ul>
     `,
     calories: 'Approx. 390 kcal per wrap'
