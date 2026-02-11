@@ -22,77 +22,87 @@ function showMealDetails(mealId) {
         },
 
         'meal2': {
-    name: 'Grilled Salmon',
-    instructions: `
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>1 salmon fillet (6 oz / 170 g)</li>
-            <li>1 tablespoon olive oil</li>
-            <li>1 clove garlic (minced)</li>
-            <li>1/2 teaspoon salt</li>
-            <li>1/4 teaspoon black pepper</li>
-            <li>1/2 teaspoon paprika</li>
-            <li>1 lemon (sliced)</li>
-        </ul>
+            name: 'Grilled Salmon',
+            instructions: `
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>1 salmon fillet (6 oz / 170 g)</li>
+                    <li>1 tablespoon olive oil</li>
+                    <li>1 clove garlic (minced)</li>
+                    <li>1/2 teaspoon salt</li>
+                    <li>1/4 teaspoon black pepper</li>
+                    <li>1/2 teaspoon paprika</li>
+                    <li>1 lemon (sliced)</li>
+                </ul>
 
-        <h3>Instructions:</h3>
-        <ol>
-            <li>Preheat grill or grill pan to medium-high heat.</li>
-            <li>Brush salmon with olive oil and season with garlic, salt, pepper, and paprika.</li>
-            <li>Place salmon skin-side down on the grill.</li>
-            <li>Grill for 4–5 minutes per side, until fish flakes easily with a fork.</li>
-            <li>Remove from heat and serve with lemon slices.</li>
-        </ol>
-    `,
-    calories: '520 kcal'
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>Preheat grill or grill pan to medium-high heat.</li>
+                    <li>Brush salmon with olive oil and season with garlic, salt, pepper, and paprika.</li>
+                    <li>Place salmon skin-side down on the grill.</li>
+                    <li>Grill for 4–5 minutes per side, until fish flakes easily with a fork.</li>
+                    <li>Remove from heat and serve with lemon slices.</li>
+                </ol>
+            `,
+            calories: '520 kcal'
         },
 
-'meal3': {
-    name: 'Beef Stir Fry',
-    instructions: `
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>8 oz (225 g) flank steak, thinly sliced</li>
-            <li>1 tablespoon vegetable oil</li>
-            <li>1 red bell pepper, sliced</li>
-            <li>1 green bell pepper, sliced</li>
-            <li>1 cup broccoli florets</li>
-            <li>2 cloves garlic, minced</li>
-            <li>1 tablespoon fresh ginger, grated</li>
-            <li>3 tablespoons soy sauce</li>
-            <li>1 tablespoon oyster sauce</li>
-            <li>1 teaspoon cornstarch</li>
-            <li>1/4 cup water</li>
-        </ul>
+        'meal3': {
+            name: 'Beef Stir Fry',
+            instructions: `
+                <h3>Ingredients:</h3>
+                <ul>
+                    <li>8 oz (225 g) flank steak, thinly sliced</li>
+                    <li>1 tablespoon vegetable oil</li>
+                    <li>1 red bell pepper, sliced</li>
+                    <li>1 green bell pepper, sliced</li>
+                    <li>1 cup broccoli florets</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>1 tablespoon fresh ginger, grated</li>
+                    <li>3 tablespoons soy sauce</li>
+                    <li>1 tablespoon oyster sauce</li>
+                    <li>1 teaspoon cornstarch</li>
+                    <li>1/4 cup water</li>
+                </ul>
 
-        <h3>Instructions:</h3>
-        <ol>
-            <li>In a small bowl, mix soy sauce, oyster sauce, cornstarch, and water. Set aside.</li>
-            <li>Heat vegetable oil in a large pan or wok over high heat.</li>
-            <li>Add beef and cook for 2–3 minutes until browned. Remove and set aside.</li>
-            <li>Add garlic and ginger, then vegetables. Stir fry for 3–4 minutes.</li>
-            <li>Return beef to the pan, pour in sauce, and stir until thickened.</li>
-            <li>Remove from heat and serve hot.</li>
-        </ol>
-    `,
-    calories: '610 kcal'
-},
+                <h3>Instructions:</h3>
+                <ol>
+                    <li>In a small bowl, mix soy sauce, oyster sauce, cornstarch, and water. Set aside.</li>
+                    <li>Heat vegetable oil in a large pan or wok over high heat.</li>
+                    <li>Add beef and cook for 2–3 minutes until browned. Remove and set aside.</li>
+                    <li>Add garlic and ginger, then vegetables. Stir fry for 3–4 minutes.</li>
+                    <li>Return beef to the pan, pour in sauce, and stir until thickened.</li>
+                    <li>Remove from heat and serve hot over rice or noodles.</li>
+                </ol>
+            `,
+            calories: '610 kcal'
+        },
 
         'meal4': {
             name: 'Veggie Pasta',
             instructions: `
                 <h3>Ingredients:</h3>
                 <ul>
-                    <li>Pasta</li>
-                    <li>Zucchini</li>
-                    <li>Tomatoes</li>
-                    <li>Olive oil</li>
+                    <li>8 oz (225 g) penne or spaghetti</li>
+                    <li>1 tablespoon olive oil</li>
+                    <li>1 zucchini, sliced</li>
+                    <li>1 cup cherry tomatoes, halved</li>
+                    <li>1/2 red bell pepper, sliced</li>
+                    <li>2 cloves garlic, minced</li>
+                    <li>1/2 teaspoon Italian seasoning</li>
+                    <li>Salt and pepper to taste</li>
+                    <li>1/4 cup grated Parmesan cheese</li>
                 </ul>
+
                 <h3>Instructions:</h3>
                 <ol>
-                    <li>Boil pasta.</li>
-                    <li>Sauté vegetables.</li>
-                    <li>Combine and serve.</li>
+                    <li>Bring a large pot of salted water to a boil and cook pasta according to package instructions. Drain and set aside.</li>
+                    <li>Heat olive oil in a large skillet over medium heat.</li>
+                    <li>Add garlic and sauté for 30 seconds until fragrant.</li>
+                    <li>Add zucchini, bell pepper, and tomatoes. Cook for 4–5 minutes until tender.</li>
+                    <li>Season with Italian seasoning, salt, and pepper.</li>
+                    <li>Add cooked pasta to the skillet and toss to combine.</li>
+                    <li>Top with Parmesan cheese and serve warm.</li>
                 </ol>
             `,
             calories: '450 kcal'
@@ -103,16 +113,24 @@ function showMealDetails(mealId) {
             instructions: `
                 <h3>Ingredients:</h3>
                 <ul>
-                    <li>Whole wheat wrap</li>
-                    <li>Turkey slices</li>
-                    <li>Lettuce</li>
-                    <li>Cheese</li>
+                    <li>1 large whole wheat tortilla</li>
+                    <li>4 oz sliced turkey breast</li>
+                    <li>1 slice cheddar or Swiss cheese</li>
+                    <li>1/4 avocado, sliced</li>
+                    <li>1 leaf romaine lettuce</li>
+                    <li>2 tomato slices</li>
+                    <li>1 tablespoon hummus or mustard</li>
+                    <li>Salt and pepper to taste</li>
                 </ul>
+
                 <h3>Instructions:</h3>
                 <ol>
-                    <li>Layer ingredients on wrap.</li>
-                    <li>Roll tightly.</li>
-                    <li>Slice and serve.</li>
+                    <li>Lay the tortilla flat on a clean surface.</li>
+                    <li>Spread hummus or mustard evenly over the center.</li>
+                    <li>Layer turkey, cheese, avocado, lettuce, and tomato.</li>
+                    <li>Season lightly with salt and pepper.</li>
+                    <li>Fold in the sides and roll tightly from the bottom.</li>
+                    <li>Slice in half and serve immediately or wrap for meal prep.</li>
                 </ol>
             `,
             calories: '350 kcal'
@@ -124,7 +142,7 @@ function showMealDetails(mealId) {
     document.getElementById('modal-title').innerText = meal.name;
     document.getElementById('modal-instructions').innerHTML = meal.instructions;
     document.getElementById('modal-calories').innerText = `Calories: ${meal.calories}`;
-    document.getElementById('meal-modal').style.display = "block";
+    document.getElementById('meal-modal').style.display = "flex";
 }
 
 function closeModal() {
