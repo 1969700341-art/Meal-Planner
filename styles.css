@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0 0 10vh 0; /* Extra 10% bottom padding */
+    padding: 0 0 10vh 0;
     background-color: #f4f4f4;
 }
 
@@ -50,7 +50,7 @@ button:hover {
 
 /* Modal styling */
 .modal {
-    display: none;
+    display: none;            /* Hidden by default */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -58,25 +58,26 @@ button:hover {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
+    padding-bottom: 10vh;
+}
 
+/* Visible state */
+.modal.show {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10vh; /* Space for OS taskbar */
 }
 
 .modal-content {
     background-color: white;
-    padding: 30px 20px 50px 20px; /* Extra bottom padding */
+    padding: 30px 20px 50px 20px;
     width: 90%;
     max-width: 600px;
     border-radius: 8px;
-
-    max-height: 85vh;  /* Slightly taller */
+    max-height: 85vh;
     overflow-y: auto;
 }
 
-/* Close button */
 .close {
     font-size: 28px;
     color: #aaa;
@@ -90,7 +91,6 @@ button:hover {
     text-decoration: none;
 }
 
-/* Optional image styling (if used later) */
 #modal-image {
     width: 100%;
     max-width: 200px;
